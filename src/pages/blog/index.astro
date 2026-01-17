@@ -22,7 +22,7 @@ const posts = (await getCollection('blog')).sort(
 			<div class="grid">
 				{
 					posts.map((post) => (
-						<a href={`/blog/${post.id}/`} class="card">
+						<a href={`${import.meta.env.BASE_URL}blog/${post.id}/`} class="card">
 							<div class="card-image" style={`background-image: url(${post.data.heroImage})`}></div>
 							<div class="card-content">
 								<div class="tag">Article</div>

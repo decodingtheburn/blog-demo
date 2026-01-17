@@ -3,12 +3,12 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <nav class="navbar">
-  <a href="/" class="logo">
+  <a href={import.meta.env.BASE_URL} class="logo">
     {SITE_TITLE}<span class="dot">.</span>
   </a>
   <div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/blog">Articles</a>
-    <a href="/about">About</a>
+    <a href={import.meta.env.BASE_URL}>Home</a>
+    <a href={`${import.meta.env.BASE_URL}blog`}>Articles</a>
+    <a href={`${import.meta.env.BASE_URL}about`}>About</a>
   </div>
 </nav>
