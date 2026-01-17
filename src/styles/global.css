@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+:root {
+	--bg-color: #0f0f12;
+	--card-bg: #18181b;
+	--text-primary: #ffffff;
+	--text-secondary: #a1a1aa;
+	--accent: #8b5cf6;
+	--accent-glow: rgba(139, 92, 246, 0.5);
+	--gradient-start: #ec4899;
+	--gradient-end: #8b5cf6;
+	--font-main: 'Outfit', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--font-main);
+	background-color: var(--bg-color);
+	color: var(--text-primary);
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Navbar */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.logo {
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+	color: var(--text-primary);
+	text-decoration: none;
+}
+
+.logo .dot {
+	color: var(--accent);
+}
+
+.nav-links {
+	display: flex;
+	gap: 2rem;
+}
+
+.nav-links a {
+	color: var(--text-secondary);
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+	color: var(--text-primary);
+}
+
+/* Hero */
+.hero {
+	text-align: center;
+	padding: 6rem 1rem;
+	position: relative;
+}
+
+.hero::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	height: 300px;
+	background: var(--accent);
+	filter: blur(150px);
+	opacity: 0.2;
+	z-index: -1;
+	max-width: 100%;
+}
+
+.hero h1 {
+	font-size: 4rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	line-height: 1.1;
+}
+
+.gradient-text {
+	background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.hero p {
+	color: var(--text-secondary);
+	font-size: 1.25rem;
+	max-width: 600px;
+	margin: 0 auto 2.5rem;
+}
+
+.cta-button {
+	background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+	border: none;
+	padding: 1rem 2.5rem;
+	border-radius: 50px;
+	color: white;
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.cta-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 20px -5px var(--accent-glow);
+}
+
+/* Container */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.section-title {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+/* Grid */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+/* Cards */
+.card {
+	background: var(--card-bg);
+	border-radius: 16px;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	text-decoration: none;
+	color: inherit;
+	display: block;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+	border-color: rgba(255, 255, 255, 0.1);
+}
+
+.card-image {
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+}
+
+.card-content {
+	padding: 1.5rem;
+}
+
+.tag {
+	font-size: 0.75rem;
+	color: var(--accent);
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+.card h3 {
+	font-size: 1.5rem;
+	margin: 0.5rem 0;
+}
+
+.card p {
+	color: var(--text-secondary);
+	margin-bottom: 1.5rem;
+	font-size: 0.95rem;
+}
+
+.read-more {
+	color: var(--text-primary);
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.9rem;
+	transition: margin-left 0.2s ease;
+}
+
+.card:hover .read-more {
+	margin-left: 5px;
+	color: var(--accent);
+}
+
+/* Blog Post Specifics */
+.post-container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.blog-post h1 {
+	font-size: 3.5rem;
+	margin: 1rem 0;
+	line-height: 1.1;
+}
+
+.post-meta {
+	color: var(--text-secondary);
+	font-size: 1rem;
+	margin-bottom: 3rem;
+}
+
+.post-image {
+	width: 100%;
+	border-radius: 20px;
+	margin-bottom: 4rem;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.post-content {
+	font-size: 1.25rem;
+	line-height: 1.8;
+	color: #e2e2e7;
+}
+
+.post-content p {
+	margin-bottom: 2rem;
+}
+
+.post-content h2 {
+	font-size: 2.25rem;
+	margin: 4rem 0 2rem;
+	color: var(--text-primary);
+}
+
+.post-content blockquote {
+	border-left: 4px solid var(--accent);
+	padding: 2.5rem;
+	margin: 3rem 0;
+	font-style: italic;
+	font-size: 1.5rem;
+	background: rgba(255, 255, 255, 0.03);
+	border-radius: 0 20px 20px 0;
+	color: var(--text-primary);
+}
+
+/* Tables in posts */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 3rem 0;
+	background: var(--card-bg);
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+th,
+td {
+	padding: 1.25rem;
+	text-align: left;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+th {
+	background: rgba(255, 255, 255, 0.05);
+	color: var(--accent);
+	font-weight: 600;
+}
+
+pre {
+	background: #09090b !important;
+	padding: 2rem;
+	border-radius: 16px;
+	overflow-x: auto;
+	margin: 3rem 0;
+	border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+code {
+	font-family: 'Fira Code', monospace;
+	font-size: 1rem;
+}
+
+/* Footer */
+footer {
+	text-align: center;
+	padding: 6rem 1rem;
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+	margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		padding: 1.5rem;
+		gap: 1.5rem;
+	}
+
+	.nav-links {
+		gap: 1.5rem;
+	}
+
+	.hero {
+		padding: 4rem 1rem;
+	}
+
+	.hero h1 {
+		font-size: 3rem;
+	}
+
+	.blog-post h1 {
+		font-size: 2.5rem;
+	}
+
+	.post-container {
+		padding: 1rem;
+	}
+
+	.post-content {
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero h1 {
+		font-size: 2.5rem;
+	}
+
+	.section-title {
+		font-size: 1.75rem;
+	}
+
+	.container {
+		padding: 1.5rem;
+	}
+
+	.card-content {
+		padding: 1.25rem;
+	}
+}
+
+/* sr-only utility for accessibility */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
