@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mastering Glassmorphism - Blog Demo</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="logo">BLOG DEMO<span class="dot">.</span></div>
+            <div class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="#" class="active">Articles</a>
+                <a href="#">About</a>
+            </div>
+        </nav>
+
+        <main class="container post-container">
+            <article class="blog-post">
+                <span class="tag">Design</span>
+                <h1>Mastering Glassmorphism</h1>
+                <div class="post-meta">Published on Jan 14, 2026 • 4 min read</div>
+                <img src="https://placehold.co/1200x600/16213e/0f3460?text=Glassmorphism" alt="Glassmorphism Design"
+                    class="post-image">
+
+                <div class="post-content">
+                    <p>Glassmorphism has become one of the defining design trends of the 2020s. Characterized by
+                        translucency, vivid background blurs, and subtle borders, it creates a sense of depth and
+                        hierarchy.</p>
+
+                    <h2>Key Characteristics</h2>
+                    <ul>
+                        <li><strong>Translucency:</strong> Using `backdrop-filter: blur()` to create a frosted glass
+                            effect.</li>
+                        <li><strong>Multi-layered approach:</strong> Objects floating in space with varying depth.</li>
+                        <li><strong>Vivid colors:</strong> Using colorful backgrounds that shine through the "glass".
+                        </li>
+                        <li><strong>Subtle borders:</strong> A fine 1px semi-transparent white border to define edges.
+                        </li>
+                    </ul>
+
+                    <h2>How to achieve it in CSS</h2>
+                    <pre><code>.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}</code></pre>
+
+                    <p>When used sparingly, it adds a premium, modern feel to any interface.</p>
+                </div>
+            </article>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Antigravity. Built with speed.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
